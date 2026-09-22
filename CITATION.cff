@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "rlvr-audit: Diagnostic CLI for Advantage Collapse in Group-Relative RLVR"
+version: 0.1.0
+date-released: 2026-09-22
+authors:
+  - family-names: Bhat
+    given-names: Krishnakumar
+doi: 10.5281/zenodo.22870159
+repository-code: "https://github.com/krishnakumarbhat/rlvr-audit"
+license: GPL-3.0-or-later
+keywords:
+  - rlvr
+  - grpo
+  - reinforcement-learning
+  - diagnostics
+  - advantage-collapse
+abstract: >-
+  Diagnostic CLI for detecting advantage collapse, zero-variance prompts,
+  and normalizer transport issues in Group-Relative RLVR. Scores group-reward
+  logs against the closed-form finite-G signal surface with SymPy-verified
+  identities.

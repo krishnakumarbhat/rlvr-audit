@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rlvr-audit"
+version = "0.1.0"
+description = "Diagnostic CLI for detecting advantage collapse, zero-variance prompts, and normalizer transport issues in Group-Relative RLVR."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Krishnakumar Bhat" }]
+keywords = ["rlvr", "grpo", "reinforcement-learning", "diagnostics", "advantage-collapse"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.24",
+  "sympy>=1.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/krishnakumarbhat/rlvr-audit"
+Repository = "https://github.com/krishnakumarbhat/rlvr-audit"
+Documentation = "https://github.com/krishnakumarbhat/rlvr-audit#readme"
+Changelog = "https://github.com/krishnakumarbhat/rlvr-audit/releases"
+
+[project.scripts]
+rlvr-audit = "rlvr_audit.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rlvr_audit"]
+
+[tool.hatch.build]
+artifacts = ["src/rlvr_audit/__init__.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

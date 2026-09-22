@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+# Test + coverage
+.pytest_cache/
+.coverage
+htmlcov/
+# Secrets / private artifacts (never commit these — see README privacy note)
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+wandb/
+.env
+*token*
+*secret*
+*credentials*
+# Logs from private training runs
+outputs/
+*.log
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
